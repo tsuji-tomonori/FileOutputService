@@ -156,4 +156,4 @@ def get_action(action: dict) -> dict:
 
 
 def to_csv(header: list, data: list) -> str:
-    return "\n".join(",".join(str(l) for l in line) for line in [header] + data)
+    return "\n".join(",".join(f'"{str(l)}"' for l in line) for line in [header] + data)
